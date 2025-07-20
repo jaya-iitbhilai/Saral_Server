@@ -1,29 +1,5 @@
 import mongoose from "mongoose";
 
-// const examDetailSchema = new mongoose.Schema({
-//   id: { type: String, required: true, unique: true },
-//   title: { type: String, required: true }, // e.g., "जवाहर नवोदय विद्यालय में कक्षा 6 वीं में प्रवेश"
-//   websiteLink: { type: String },
-//   description: { type: String, required: true }, // full  description
-//   eligibility: { type: String },
-//   applicationProcess: { type: String },
-//   examPattern: { type: String },
-//   examStructure: {
-//     type: [
-//       {
-//         subject: String,
-//         questions: Number,
-//         marks: Number,
-//         duration: String,
-//       },
-//     ],
-//     default: [],
-//   },
-//   specialNotes: { type: String },
-//   reservation: { type: String },
-//   contact: { type: String },
-// });
-
 const careerSchema = new mongoose.Schema(
   {
     currentStatus: {

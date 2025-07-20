@@ -20,7 +20,7 @@ const schemeSchema = new mongoose.Schema({
     hi: [{ type: String }],
   },
   contact: {
-    phone: { type: String },
+    phone: [{ type: String }],
     email: { type: String },
     office: {
       en: { type: String },

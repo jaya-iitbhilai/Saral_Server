@@ -32,11 +32,11 @@ const personSchema = new mongoose.Schema(
 
 const departmentSchema = new mongoose.Schema({
   id: String,
+  icon: String,
   name: {
     en: String,
     hi: String,
   },
-  icon: String,
   description: {
     en: String,
     hi: String,
