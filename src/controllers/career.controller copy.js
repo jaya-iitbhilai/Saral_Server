@@ -16,8 +16,7 @@ import Career from "../models/career.model.js";
 
 export const createCareer = async (req, res) => {
   try {
-    console.log("req file---", req.file);
-    console.log("req body", req.body);
+    // console.log("req.file", req);
     // console.log("upload file", req.body.uploadFile);
     // const filePath = req.body.uploadFile
     //   ? `/images/uploads/${req.body.uploadFile}`

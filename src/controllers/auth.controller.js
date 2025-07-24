@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log("Login request received:", req.body, email, password);
 
     if (!email || !password) {
       return res.status(400).json({
