@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
-import path from "path";
 import submitPaperRoutes from "./routes/submitPaper.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import departmentRoutes from "./routes/department.routes.js";
@@ -14,12 +13,7 @@ dotenv.config();
 dotenv.config();
 const app = express();
 
-// Serve uploaded files
-// app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
-// app.use(
-//   "/images/uploads",
-//   express.static(path.join(process.cwd(), "public/images/uploads"))
-// );
+app.use(express.static("public"));
 
 // Middleware
 // parse json request body
@@ -44,9 +38,5 @@ app.use("/api/auth", authRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use("/api/schemes", schemeRoutes);
 app.use("/api/careers", careerRoutes);
-// app.get("/", (req, res) => {
-//   res.send("hhe");
-//   console.log("..", res.header());
-// });
 
 export default app;

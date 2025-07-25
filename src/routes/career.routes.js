@@ -10,12 +10,7 @@ import { upload } from "../middleware/uploadFile.js";
 const router = express.Router();
 
 router.post("/", upload.single("uploadFile"), createCareer);
-// router.post("/", upload.single("uploadFile"), (req, res) => {
-//   console.log(req.file);
-// });
-// router.get("/", getAllCareers);
 router.get("/", getCareersByStatus);
-// routes/careerRoutes.ts
 router.get("/:id", async (req, res) => {
   try {
     const career = await Career.findOne({ id: req.params.id });

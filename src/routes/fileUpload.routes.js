@@ -9,7 +9,6 @@ router.post("/upload", upload.single("file"), (req, res) => {
   }
 
   const filePath = `/uploads/${req.file.filename}`;
-  console.log("filePath****", filePath);
 
   res.status(200).json({ message: "File uploaded successfully", filePath });
 });

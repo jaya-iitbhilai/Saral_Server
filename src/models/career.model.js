@@ -4,10 +4,12 @@ const careerSchema = new mongoose.Schema(
   {
     currentStatus: {
       type: String,
+      required: true,
       enum: ["Education", "Job", "Business"],
     },
     currentEducation: {
       type: String,
+      required: true,
       enum: [
         "class-5",
         "class-6",
@@ -76,6 +78,7 @@ const careerSchema = new mongoose.Schema(
             "भाग-10 छ.ग. व्यापम द्वारा आयोजित भर्ती प्रतियोगी परीक्षायें",
             "भाग-11 अन्य भर्ती परीक्षायें एवं शिक्षा ऋण, दिव्यांगजनों के लिये शासन की योजनाएं तथा ऑनलाईन रोजगार पंजीयन",
           ],
+          required: true,
         },
         en: {
           type: String,
@@ -92,19 +95,20 @@ const careerSchema = new mongoose.Schema(
             "Part-10 Competitive examinations conducted by CG Vyapam",
             "Part-11 Other recruitment exams, education loans, government schemes for persons with disabilities, and online employment registration",
           ],
+          required: true,
         },
       },
     },
 
-    id: { type: String },
+    id: { type: String, required: true },
     title: {
-      en: { type: String },
-      hi: { type: String },
+      en: { type: String, required: true },
+      hi: { type: String, required: true },
     }, // e.g., "जवाहर नवोदय विद्यालय में कक्षा 6 वीं में प्रवेश"
     websiteLink: { type: String },
     description: {
-      en: { type: String },
-      hi: { type: String },
+      en: { type: String, required: true },
+      hi: { type: String, required: true },
     }, // full  description
     eligibility: { en: { type: String }, hi: { type: String } },
     applicationProcess: { en: { type: String }, hi: { type: String } },
@@ -112,11 +116,11 @@ const careerSchema = new mongoose.Schema(
     examStructure: [
       {
         subject: {
-          en: { type: String },
-          hi: { type: String },
+          en: { type: String, required: true },
+          hi: { type: String, required: true },
         },
-        questions: { type: Number },
-        marks: { type: Number },
+        questions: { type: Number, required: true },
+        marks: { type: Number, required: true },
         duration: { type: String },
       },
     ],
