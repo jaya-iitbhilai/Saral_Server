@@ -25,12 +25,16 @@ const careerSchema = new mongoose.Schema(
           "working",
           "phd",
           "diploma",
+          "bachelor-first-year",
+          "bachelor-second-year",
+          "bachelor-third-year",
+          "masters"
         ],
       },
     ],
     stream: {
       type: String,
-      enum: ["science", "commerce", "arts", "not-applicable"],
+      enum: ["science", "commerce", "arts","Vocational", "not-applicable"],
       default: "not-applicable",
     },
     interests: [
@@ -60,6 +64,10 @@ const careerSchema = new mongoose.Schema(
           "Academics",
           "Education",
           "Science",
+          "Innovation",
+          "Higher-Education",
+          "Fundamental-Sciences",
+          "ITI","Technical Training","Skill Development"
         ],
       },
     ],
