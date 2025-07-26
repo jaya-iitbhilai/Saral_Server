@@ -34,7 +34,7 @@ const careerSchema = new mongoose.Schema(
     ],
     stream: {
       type: String,
-      enum: ["science", "commerce", "arts", "Vocational", "not-applicable"],
+      enum: ["science", "commerce", "arts","Vocational", "not-applicable"],
       default: "not-applicable",
     },
     interests: [
@@ -43,7 +43,15 @@ const careerSchema = new mongoose.Schema(
         enum: [
           "Technology",
           "Teaching",
+          "Research",
+          "Academics",
+          "Education",
+          "Primary School",
+          "Government Jobs",
           "Administration",
+          "Lecturer",
+          "Assistant Professor",
+          "Higher Education",
           "Defense",
           "Banking",
           "Railways",
@@ -60,18 +68,11 @@ const careerSchema = new mongoose.Schema(
           "Franchise",
           "Cooperative",
           "Partnership",
-          "Research",
-          "Academics",
-          "Education",
           "Science",
           "Innovation",
           "Higher-Education",
           "Fundamental-Sciences",
-          "ITI",
-          "Technical Training",
-          "Skill Development",
-          "Architecture",
-          "Design","Hospitality","Service", "Management"
+          "ITI","Technical Training","Skill Development"
         ],
       },
     ],
@@ -114,16 +115,16 @@ const careerSchema = new mongoose.Schema(
       },
     },
 
-    id: { type: String, required: true },
+    id: { type: String },
     title: {
       en: { type: String, required: true },
       hi: { type: String, required: true },
-    }, // e.g., "जवाहर नवोदय विद्यालय में कक्षा 6 वीं में प्रवेश"
+    },
     websiteLink: { type: String },
     description: {
       en: { type: String, required: true },
       hi: { type: String, required: true },
-    }, // full  description
+    },
     eligibility: { en: { type: String }, hi: { type: String } },
     applicationProcess: { en: { type: String }, hi: { type: String } },
     examPattern: { en: { type: String }, hi: { type: String } },
@@ -142,11 +143,6 @@ const careerSchema = new mongoose.Schema(
     reservation: { en: { type: String }, hi: { type: String } },
     contact: { en: { type: String }, hi: { type: String } },
     uploadFile: { type: String },
-
-    // subExams: {
-    //   // type: [examDetailSchema],
-    //   default: [],
-    // },
   },
   { timestamps: true }
 );
