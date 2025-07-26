@@ -28,13 +28,13 @@ const careerSchema = new mongoose.Schema(
           "bachelor-first-year",
           "bachelor-second-year",
           "bachelor-third-year",
-          "masters"
+          "masters",
         ],
       },
     ],
     stream: {
       type: String,
-      enum: ["science", "commerce", "arts","Vocational", "not-applicable"],
+      enum: ["science", "commerce", "arts", "Vocational", "not-applicable"],
       default: "not-applicable",
     },
     interests: [
@@ -67,7 +67,11 @@ const careerSchema = new mongoose.Schema(
           "Innovation",
           "Higher-Education",
           "Fundamental-Sciences",
-          "ITI","Technical Training","Skill Development"
+          "ITI",
+          "Technical Training",
+          "Skill Development",
+          "Architecture",
+          "Design","Hospitality","Service", "Management"
         ],
       },
     ],
