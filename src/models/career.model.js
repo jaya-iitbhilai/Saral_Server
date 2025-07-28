@@ -41,6 +41,7 @@ const careerSchema = new mongoose.Schema(
         "arts",
         "vocational",
         "commerce",
+        "any",
         "not-applicable",
       ],
       default: "not-applicable",
