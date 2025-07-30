@@ -30,24 +30,27 @@ const personSchema = new mongoose.Schema(
   { _id: false }
 );
 
-const departmentSchema = new mongoose.Schema({
-  id: String,
-  icon: String,
-  name: {
-    en: String,
-    hi: String,
+const departmentSchema = new mongoose.Schema(
+  {
+    id: String,
+    icon: String,
+    name: {
+      en: String,
+      hi: String,
+    },
+    description: {
+      en: String,
+      hi: String,
+    },
+    website: String,
+    contact: contactSchema,
+    office: {
+      address: addressSchema,
+      pincode: String,
+    },
+    personsOfContact: [personSchema],
   },
-  description: {
-    en: String,
-    hi: String,
-  },
-  website: [String],
-  contact: contactSchema,
-  office: {
-    address: addressSchema,
-    pincode: String,
-  },
-  personsOfContact: [personSchema],
-});
+  { timestamps: true }
+);
 
 export const Department = mongoose.model("Department", departmentSchema);
