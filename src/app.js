@@ -8,6 +8,7 @@ import authRoutes from "./routes/auth.routes.js";
 import departmentRoutes from "./routes/department.routes.js";
 import schemeRoutes from "./routes/scheme.routes.js";
 import careerRoutes from "./routes/career.routes.js";
+import sakshamRoutes from "./routes/saksham.routes.js";
 
 dotenv.config();
 dotenv.config();
@@ -38,5 +39,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use("/api/schemes", schemeRoutes);
 app.use("/api/careers", careerRoutes);
+app.use("/api/saksham", sakshamRoutes);
 
 export default app;
